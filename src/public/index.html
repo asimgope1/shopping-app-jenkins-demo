@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping App - Jenkins CI/CD Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background-decorations">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-icon">🛒</span>
+      <span class="brand-name">QuickCart <span class="badge-ci">CI/CD Enabled</span></span>
+    </div>
+    <div class="pipeline-status">
+      <span class="dot pulse-green"></span>
+      <span>Jenkins Runner: Active</span>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <!-- Login Card View -->
+    <section id="login-section" class="auth-card">
+      <div class="card-header">
+        <h1 class="visually-hidden">Shopping App Authentication</h1>
+        <h2 id="login-heading">Login</h2>
+        <p class="subtitle">Enter your corporate credentials to access the store</p>
+      </div>
+
+      <!-- Alert / Validation Banner -->
+      <div id="alert-banner" role="alert" class="alert hidden" aria-live="polite"></div>
+
+      <!-- Quick credentials hint for testers -->
+      <div class="demo-credentials-box">
+        <strong>🧪 Test Credentials:</strong>
+        <div class="cred-row">
+          <span>Email: <code>rahul@company.com</code></span>
+          <span>Password: <code>Password123!</code></span>
+        </div>
+      </div>
+
+      <form id="login-form" novalidate>
+        <div class="form-group">
+          <label for="email-input">Work Email</label>
+          <div class="input-wrapper">
+            <span class="input-icon">✉️</span>
+            <input 
+              id="email-input" 
+              name="email" 
+              type="email" 
+              placeholder="e.g. rahul@company.com" 
+              autocomplete="email"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password-input">Password</label>
+          <div class="input-wrapper">
+            <span class="input-icon">🔒</span>
+            <input 
+              id="password-input" 
+              name="password" 
+              type="password" 
+              placeholder="••••••••" 
+              autocomplete="current-password"
+            />
+          </div>
+        </div>
+
+        <button id="login-button" type="submit" class="btn-primary">
+          <span class="btn-text">Sign In</span>
+          <span class="btn-spinner hidden"></span>
+        </button>
+      </form>
+    </section>
+
+    <!-- Post-Login Dashboard View -->
+    <section id="dashboard-section" class="dashboard-card hidden">
+      <div class="dashboard-header">
+        <div>
+          <span class="tag-success">✓ Authenticated Session</span>
+          <h2 id="welcome-message">Welcome to Shopping Dashboard</h2>
+          <p id="user-details" class="user-subtitle">Logged in as Rahul Sharma</p>
+        </div>
+        <button id="logout-button" class="btn-secondary">Log Out</button>
+      </div>
+
+      <div class="dashboard-stats">
+        <div class="stat-box">
+          <span class="stat-number">24</span>
+          <span class="stat-label">Products in Stock</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Items in Cart</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Automation Coverage</span>
+        </div>
+      </div>
+
+      <div class="catalog-grid">
+        <div class="product-item">
+          <div class="product-badge">Top Seller</div>
+          <div class="product-thumb">💻</div>
+          <h3>Developer Pro Laptop</h3>
+          <p class="price">$1,499.00</p>
+          <button class="btn-cart">Add to Cart</button>
+        </div>
+        <div class="product-item">
+          <div class="product-badge">QA Favorite</div>
+          <div class="product-thumb">🎧</div>
+          <h3>Noise-Canceling Headset</h3>
+          <p class="price">$199.00</p>
+          <button class="btn-cart">Add to Cart</button>
+        </div>
+        <div class="product-item">
+          <div class="product-badge">New</div>
+          <div class="product-thumb">☕</div>
+          <h3>Smart Temperature Mug</h3>
+          <p class="price">$79.00</p>
+          <button class="btn-cart">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>CI/CD Automation Lab • Playwright Test Suite + Jenkins Pipeline</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

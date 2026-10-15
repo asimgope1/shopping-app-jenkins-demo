@@ -1,0 +1,23 @@
+{
+  "name": "shopping-app-jenkins-demo",
+  "version": "1.0.0",
+  "description": "Demo shopping application with Playwright automation testing and Jenkins CI/CD pipeline",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "start:broken": "BREAK_LOGIN=true node src/server.js",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report"
+  },
+  "keywords": ["jenkins", "playwright", "ci-cd", "qa-automation", "testing"],
+  "author": "Rahul & Asim",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1"
+  }
+}
