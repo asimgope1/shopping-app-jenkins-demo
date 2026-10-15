@@ -3,7 +3,7 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const IS_BROKEN = true; // 🚨 Rahul accidentally broke the login authentication service
+const IS_BROKEN = process.env.BREAK_LOGIN === 'true'; // ✅ Bug fixed by Rahul!
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
